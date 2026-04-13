@@ -1,10 +1,8 @@
 .DS_Store
 .godot/
-
-# Local Godot export output
 Exports/
 deploy_muos/
 build/
-
-# Large local art / scratch files
-PingPong copy.png
+docs/screenshots/*.png
+release/github/*.zip
+release/store/*.zip

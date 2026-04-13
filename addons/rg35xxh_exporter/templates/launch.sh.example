@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+PAYLOAD_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+GAME_DIR="$PAYLOAD_DIR/game"
+GAME_ARTIFACT="$GAME_DIR/my_game.pck"
+RUNTIME_PATH="$PAYLOAD_DIR/runtime/godot.linuxbsd.template_release.arm64"
+
+cd "$PAYLOAD_DIR"
+"$RUNTIME_PATH" --main-pack "$GAME_ARTIFACT" "$@"
